@@ -1,4 +1,4 @@
-package com.zhhl.kuangjia.Uri;
+package com.zhhl.kuangjia.uri;
 
 /**
  * Created by czy on 2019/6/27 8:55.

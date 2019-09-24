@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -23,6 +24,8 @@ import com.zhhl.kuangjia.update.UpdateManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by qgl on 2019/9/19 15:35.
  */
@@ -31,11 +34,11 @@ public abstract class BaseActivity extends FragmentActivity implements ViewTreeO
     public static List<Activity> activitys;
     protected Context mContext;
     ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         statusBarConfig().init();
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         if (activitys == null) {
             activitys = new ArrayList<Activity>();
         }
@@ -44,8 +47,9 @@ public abstract class BaseActivity extends FragmentActivity implements ViewTreeO
         if (getLayoutId() > 0) {
             setContentView(getLayoutId());
         }
-
-        init();
+        ButterKnife.bind(this);
+        initView();
+        initData();
     }
 
     /**
@@ -96,11 +100,6 @@ public abstract class BaseActivity extends FragmentActivity implements ViewTreeO
     @Override
     public void onGlobalLayout() {
 
-    }
-
-    public void init() {
-        initView();
-        initData();
     }
 
     //引入布局
@@ -155,7 +154,4 @@ public abstract class BaseActivity extends FragmentActivity implements ViewTreeO
     {
         progressDialog.dismiss();
     }
-
-
-
 }

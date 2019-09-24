@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/cs_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认1" />
+
+            <Button
+                android:id="@+id/cs_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认2" />
+
+            <Button
+                android:id="@+id/cs_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转Map" />
+
+            <Button
+                android:id="@+id/cs_btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转ListView" />
+
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="刷新区域" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+        <app.dinus.com.loadingdrawable.LoadingView
+            android:id="@+id/circle_brood_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffd4d9da"
+            app:loading_renderer="GhostsEyeLoadingRenderer" />
+    </RelativeLayout>
+
+
+</LinearLayout>

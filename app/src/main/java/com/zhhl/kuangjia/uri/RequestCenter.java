@@ -1,4 +1,4 @@
-package com.zhhl.kuangjia.Uri;
+package com.zhhl.kuangjia.uri;
 
 
 import com.example.toollibrary.okhttp.CommonOkHttpClient;
@@ -8,7 +8,7 @@ import com.example.toollibrary.okhttp.request.CommonRequest;
 import com.example.toollibrary.okhttp.request.RequestParams;
 
 
-import static com.zhhl.kuangjia.Uri.UrlService.QISHI1;
+import static com.zhhl.kuangjia.uri.UrlService.QISHI1;
 
 
 /**
