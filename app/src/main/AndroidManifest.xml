@@ -24,6 +24,8 @@
         <activity android:name=".activitys.ListviewActivity"/>
         <activity android:name=".activitys.Map"/>
         <activity android:name=".activitys.JieTuActivity"/>
+        <activity android:name=".activitys.TableActivity"/>
+        <activity android:name=".activitys.ShuiyinActivity"/>
     </application>
 
 </manifest>
