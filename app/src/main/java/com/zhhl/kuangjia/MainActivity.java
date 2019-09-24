@@ -70,9 +70,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     RadioButton rbNews;
     @BindView(R.id.rg_footer)
     RadioGroup rgFooter;
-    boolean isgowork=false;
-    boolean isgoaddress=false;
-    boolean isgoagency=false;
+    boolean isgowork = false;
+    boolean isgoaddress = false;
+    boolean isgoagency = false;
     private FragmentTransaction transaction;
     private OneFragment oneFragment;
     private TwoFragment twoFragment;
@@ -92,8 +92,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     protected void initView() {
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP)
-        {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, BASIC_PERMISSIONS, REQUEST_PERMISSION_CODE);
             }
@@ -105,18 +104,17 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        isgowork=intent.getBooleanExtra("isgowork", false);
-        isgoaddress=intent.getBooleanExtra("isgoaddress", false);
-        if(isgowork){
+        isgowork = intent.getBooleanExtra("isgowork", false);
+        isgoaddress = intent.getBooleanExtra("isgoaddress", false);
+        if (isgowork) {
             rbMessage.performClick();
         }
-        if(isgoaddress){
+        if (isgoaddress) {
             rbAddress.performClick();
         }
-        if(isgoagency){
+        if (isgoagency) {
             rbWork.performClick();
-        }
-        else{
+        } else {
             rbNews.performClick();
         }
 
@@ -130,38 +128,37 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         hideAllFragment(transaction);
         switch (i) {
             case R.id.rb_message:
-                    if (oneFragment == null)
-                    {
-                        oneFragment = new OneFragment().newInstance("requestJson");
+                if (oneFragment == null) {
+                    oneFragment = new OneFragment().newInstance("requestJson");
 
-                        transaction.add(R.id.content, oneFragment);
-                    } else {
-                        transaction.show(oneFragment);
-                    }
+                    transaction.add(R.id.content, oneFragment);
+                } else {
+                    transaction.show(oneFragment);
+                }
                 break;
 
             case R.id.rb_address:
                 if (twoFragment == null) {
                     twoFragment = new TwoFragment().newInstance("");
-                    transaction.add(R.id.content,twoFragment);
+                    transaction.add(R.id.content, twoFragment);
                 } else {
                     transaction.show(twoFragment);
                 }
                 break;
             case R.id.rb_work:
-                    if (threeFragment == null) {
-                        threeFragment = new ThreeFragment().newInstance("");
-                        transaction.add(R.id.content, threeFragment);
-                    } else {
-                        transaction.show(threeFragment);
-                    }
+                if (threeFragment == null) {
+                    threeFragment = new ThreeFragment().newInstance("");
+                    transaction.add(R.id.content, threeFragment);
+                } else {
+                    transaction.show(threeFragment);
+                }
 
                 break;
 
             case R.id.rb_news:
                 if (fourFragment == null) {
                     fourFragment = new FourFragment().newInstance("");
-                    transaction.add(R.id.content,fourFragment);
+                    transaction.add(R.id.content, fourFragment);
                 } else {
                     transaction.show(fourFragment);
                 }
@@ -172,9 +169,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     private void hideAllFragment(FragmentTransaction transaction) {
         if (oneFragment != null) this.transaction.hide(oneFragment);
-        if (twoFragment!=null) this.transaction.hide(twoFragment);
-        if (threeFragment!=null) this.transaction.hide(threeFragment);
-        if (fourFragment !=null) this.transaction.hide(fourFragment);
+        if (twoFragment != null) this.transaction.hide(twoFragment);
+        if (threeFragment != null) this.transaction.hide(threeFragment);
+        if (fourFragment != null) this.transaction.hide(fourFragment);
 
     }
 

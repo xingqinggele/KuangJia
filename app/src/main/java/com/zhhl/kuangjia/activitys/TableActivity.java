@@ -100,7 +100,7 @@ public class TableActivity extends BaseActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton radbtn = (RadioButton) findViewById(checkedId);
                 xingbie = radbtn.getText().toString();
-                Toast.makeText(getApplicationContext(), "按钮组值发生改变,你选了" + radbtn.getText(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "按钮组值发生年变,你选了" + radbtn.getText(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -121,14 +121,14 @@ public class TableActivity extends BaseActivity {
         reasonlist.add("5");
         reasonlist.add("6");
         reasonlist.add("7");
-        reasonPicker = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
-            @Override
-            public void onOptionsSelect(int options1, int options2, int options3, View v) {
-                tvReaseon.setText(reasonlist.get(options1) + " 岁");
-            }
-        }).setTitleText("请选择年龄").setContentTextSize(22).setTitleSize(22).setSubCalSize(21).build();
+    reasonPicker = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
+        @Override
+        public void onOptionsSelect(int options1, int options2, int options3, View v) {
+            tvReaseon.setText(reasonlist.get(options1) + " 岁");
+        }
+    }).setTitleText("请选择年龄").setContentTextSize(22).setTitleSize(22).setSubCalSize(21).build();
         reasonPicker.setPicker(reasonlist);
-    }
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,7 +163,7 @@ public class TableActivity extends BaseActivity {
 
             }
         }).setType(new boolean[]{true, true, true, false, false, false})
-                .setLabel("年", "月", "日", "时", "分", "秒")
+                .setLabel("", "月", "日", "时", "分", "秒")
                 .build();
         pvTime.show();
     }
@@ -254,7 +254,7 @@ public class TableActivity extends BaseActivity {
 
     //提交数据
     public void postData() {
-        if (TextUtils.isEmpty(tvReaseon.getText().toString().trim()) || tvReaseon.getText().toString().trim().equals("请选择年龄")) {
+        if (TextUtils.isEmpty(tvReaseon.getText().toString().trim()) || tvReaseon.getText().toString().trim().equals("请选择龄")) {
             showToast("请选择年龄");
             return;
         }
