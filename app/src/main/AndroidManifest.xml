@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".app.MyAppliction">
+        <!--数据库-->
+        <!--新建的sqlite数据库名称-->
+        <meta-data android:name="DATABASE" android:value="ceshi.db"/>
+        <!--数据库的版本。通过数据库的版本决定是否对数据库进行更新-->
+        <meta-data android:name="VERSION" android:value="3"/>
+        <!--在处理数据库过程中，是否在Logcat显示日志-->
+        <meta-data android:name="QUERY_LOG" android:value="true"/>
+        <!--第2步新建的类所在的包名-->
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.zhhl.kuangjia.bean"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +36,7 @@
         <activity android:name=".activitys.JieTuActivity"/>
         <activity android:name=".activitys.TableActivity"/>
         <activity android:name=".activitys.ShuiyinActivity"/>
+        <activity android:name=".activitys.SQLiteActivity"/>
     </application>
 
 </manifest>

@@ -51,6 +51,7 @@ public class Listadapter extends RecyclerView.Adapter<Listadapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.key_name.setText(dataList.get(position).getName());
         holder.pass.setText(dataList.get(position).getPass());
+
     }
 
     @Override

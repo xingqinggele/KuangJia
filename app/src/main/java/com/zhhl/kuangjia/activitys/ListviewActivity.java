@@ -14,6 +14,7 @@ import com.zhhl.kuangjia.R;
 import com.zhhl.kuangjia.adapter.Listadapter;
 import com.zhhl.kuangjia.base.BaseActivity;
 import com.zhhl.kuangjia.bean.Databean;
+import com.zhhl.kuangjia.bean.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +87,8 @@ public class ListviewActivity extends BaseActivity implements PullLoadMoreRecycl
             newslistBean.setPass("这是第" + i + "个新闻的内容");
             datalist.add(newslistBean);
         }
+
+
         listAdapter.addAllData(datalist);
         oneListview.setPullLoadMoreCompleted();
     }

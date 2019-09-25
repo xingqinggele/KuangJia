@@ -18,6 +18,7 @@ import com.example.toollibrary.Utils.ILogUploadImpl;
 import com.zhhl.kuangjia.R;
 import com.zhhl.kuangjia.activitys.CeshiActivity;
 import com.zhhl.kuangjia.activitys.JieTuActivity;
+import com.zhhl.kuangjia.activitys.SQLiteActivity;
 import com.zhhl.kuangjia.activitys.ShuiyinActivity;
 import com.zhhl.kuangjia.activitys.TableActivity;
 
@@ -44,6 +45,8 @@ public class OneFragment extends Fragment {
     Button btn3;
     @BindView(R.id.btn4)
     Button btn4;
+    @BindView(R.id.btn5)
+    Button btn5;
     Unbinder unbinder;
     private static final String ARG = "arg";
     @Nullable
@@ -65,7 +68,7 @@ public class OneFragment extends Fragment {
         return fragment;
     }
 
-    @OnClick({R.id.btn1, R.id.btn2,R.id.btn3,R.id.btn4})
+    @OnClick({R.id.btn1, R.id.btn2,R.id.btn3,R.id.btn4,R.id.btn5})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -106,6 +109,10 @@ public class OneFragment extends Fragment {
             case R.id.btn4:
                 Intent intent2 = new Intent(getActivity(), ShuiyinActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.btn5:
+                Intent intent3 = new Intent(getActivity(), SQLiteActivity.class);
+                startActivity(intent3);
                 break;
         }
     }
