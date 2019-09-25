@@ -14,13 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.toollibrary.Utils.ILogUploadImpl;
 import com.zhhl.kuangjia.R;
 import com.zhhl.kuangjia.activitys.CeshiActivity;
 import com.zhhl.kuangjia.activitys.JieTuActivity;
 import com.zhhl.kuangjia.activitys.SQLiteActivity;
 import com.zhhl.kuangjia.activitys.ShuiyinActivity;
-import com.zhhl.kuangjia.activitys.TableActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,8 +39,6 @@ public class OneFragment extends Fragment {
     Button btn1;
     @BindView(R.id.btn2)
     Button btn2;
-    @BindView(R.id.btn3)
-    Button btn3;
     @BindView(R.id.btn4)
     Button btn4;
     @BindView(R.id.btn5)
@@ -68,7 +64,7 @@ public class OneFragment extends Fragment {
         return fragment;
     }
 
-    @OnClick({R.id.btn1, R.id.btn2,R.id.btn3,R.id.btn4,R.id.btn5})
+    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -101,10 +97,6 @@ public class OneFragment extends Fragment {
                     } catch (Exception e) {
                     }
                 }
-                break;
-            case R.id.btn3:
-                Intent intent1 = new Intent(getActivity(), TableActivity.class);
-                startActivity(intent1);
                 break;
             case R.id.btn4:
                 Intent intent2 = new Intent(getActivity(), ShuiyinActivity.class);

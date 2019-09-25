@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowInsets;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
@@ -27,6 +28,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.toollibrary.okhttp.exception.OkHttpException;
 import com.example.toollibrary.okhttp.listener.DisposeDataListener;
 import com.example.toollibrary.okhttp.request.RequestParams;
+import com.zhhl.kuangjia.activitys.TableActivity;
 import com.zhhl.kuangjia.base.BaseActivity;
 import com.zhhl.kuangjia.fragment.OneFragment;
 import com.zhhl.kuangjia.fragment.ThreeFragment;
@@ -36,6 +38,7 @@ import com.zhhl.kuangjia.view.DragFloatActionButton;
 
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -74,7 +77,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 
     @Override
     protected int getLayoutId() {
@@ -184,5 +186,14 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         }
     }
 
+    @OnClick(R.id.floatbutton)
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.floatbutton:
+                Intent intent = new Intent(MainActivity.this, TableActivity.class);
+                startActivity(intent);
+                break;
 
+        }
+    }
 }

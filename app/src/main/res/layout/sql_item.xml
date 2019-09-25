@@ -17,30 +17,30 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:id="@+id/t1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
                 android:text="姓名："
-                android:textSize="13sp" />
+                android:textSize="16sp" />
 
 
             <TextView
+                android:layout_marginBottom="10dp"
                 android:id="@+id/t2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/t1"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="10dp"
                 android:text="密码："
-                android:textSize="13sp" />
+                android:textSize="16sp" />
 
 
         </RelativeLayout>

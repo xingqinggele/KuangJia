@@ -35,11 +35,7 @@
                 android:layout_height="wrap_content"
                 android:text="跳转Map" />
 
-            <Button
-                android:id="@+id/cs_btn4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转ListView" />
+
 
 
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

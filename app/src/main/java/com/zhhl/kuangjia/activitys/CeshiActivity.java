@@ -31,8 +31,6 @@ public class CeshiActivity extends BaseActivity implements SwipeRefreshLayout.On
     SwipeRefreshLayout swipeRefreshLayout;
     @BindView(R.id.cs_btn3)
     Button csBtn3;
-    @BindView(R.id.cs_btn4)
-    Button csBtn4;
     @BindView(R.id.filsh)
     RelativeLayout filsh;
     @BindView(R.id.title)
@@ -71,7 +69,7 @@ public class CeshiActivity extends BaseActivity implements SwipeRefreshLayout.On
         title.setText("测试Activity");
     }
 
-    @OnClick({R.id.cs_btn, R.id.cs_btn2, R.id.cs_btn3, R.id.cs_btn4, R.id.filsh})
+    @OnClick({R.id.cs_btn, R.id.cs_btn2, R.id.cs_btn3,R.id.filsh})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.cs_btn:
@@ -90,10 +88,7 @@ public class CeshiActivity extends BaseActivity implements SwipeRefreshLayout.On
                 Intent intent3 = new Intent(CeshiActivity.this, Map.class);
                 startActivity(intent3);
                 break;
-            case R.id.cs_btn4:
-                Intent intent4 = new Intent(CeshiActivity.this, ListviewActivity.class);
-                startActivity(intent4);
-                break;
+
             case R.id.filsh:
                 finish();
                 break;
