@@ -42,7 +42,7 @@ public class Listadapter extends RecyclerView.Adapter<Listadapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.sql_item, parent, false);
 
         return new ViewHolder(v);
     }
@@ -65,8 +65,8 @@ public class Listadapter extends RecyclerView.Adapter<Listadapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            key_name = itemView.findViewById(R.id.name);
-            pass = itemView.findViewById(R.id.pass);
+            key_name = itemView.findViewById(R.id.t1);
+            pass = itemView.findViewById(R.id.t2);
 
         }
     }

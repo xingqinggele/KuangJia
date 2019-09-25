@@ -48,23 +48,19 @@
                         android:id="@+id/rb_message"
                         style="@style/footer_radioButton_style"
                         android:drawableTop="@drawable/main_low_tab1"
-                        android:text="消息" />
+                        android:text="首页" />
 
                     <RadioButton
                         android:id="@+id/rb_address"
                         style="@style/footer_radioButton_style"
                         android:drawableTop="@drawable/main_low_tab2"
-                        android:text="通讯录" />
+                        android:text="记录" />
                     <RadioButton
                         android:id="@+id/rb_work"
                         style="@style/footer_radioButton_style"
-                        android:drawableTop="@drawable/main_low_tab3"
-                        android:text="发现" />
-                    <RadioButton
-                        android:id="@+id/rb_news"
-                        style="@style/footer_radioButton_style"
-                        android:drawableTop="@drawable/main_low_tab2"
+                        android:drawableTop="@drawable/main_low_tab4"
                         android:text="我的" />
+
                 </RadioGroup>
 
 
@@ -82,8 +78,8 @@
             android:layout_marginBottom="60dp"
             android:clickable="true"
             android:scaleType="center"
-            android:src="@mipmap/home_icon8"
-            app:backgroundTint="#164186"
+            android:src="@mipmap/dragfloat_icon"
+            app:backgroundTint="#FFCB00"
             app:borderWidth="0dp"
             app:elevation="6dp"
             app:pressedTranslationZ="12dp"

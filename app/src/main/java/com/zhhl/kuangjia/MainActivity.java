@@ -27,21 +27,15 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.toollibrary.okhttp.exception.OkHttpException;
 import com.example.toollibrary.okhttp.listener.DisposeDataListener;
 import com.example.toollibrary.okhttp.request.RequestParams;
-import com.zhhl.kuangjia.activitys.CeshiActivity;
-import com.zhhl.kuangjia.activitys.JieTuActivity;
 import com.zhhl.kuangjia.base.BaseActivity;
-import com.zhhl.kuangjia.fragment.FourFragment;
 import com.zhhl.kuangjia.fragment.OneFragment;
 import com.zhhl.kuangjia.fragment.ThreeFragment;
 import com.zhhl.kuangjia.fragment.TwoFragment;
 import com.zhhl.kuangjia.uri.RequestCenter;
 import com.zhhl.kuangjia.view.DragFloatActionButton;
 
-import java.io.File;
-import java.io.FileOutputStream;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -66,8 +60,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     RadioButton rbAddress;
     @BindView(R.id.rb_work)
     RadioButton rbWork;
-    @BindView(R.id.rb_news)
-    RadioButton rbNews;
     @BindView(R.id.rg_footer)
     RadioGroup rgFooter;
     boolean isgowork = false;
@@ -77,7 +69,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private OneFragment oneFragment;
     private TwoFragment twoFragment;
     private ThreeFragment threeFragment;
-    private FourFragment fourFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,8 +105,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         }
         if (isgoagency) {
             rbWork.performClick();
-        } else {
-            rbNews.performClick();
         }
 
     }
@@ -154,15 +143,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 }
 
                 break;
-
-            case R.id.rb_news:
-                if (fourFragment == null) {
-                    fourFragment = new FourFragment().newInstance("");
-                    transaction.add(R.id.content, fourFragment);
-                } else {
-                    transaction.show(fourFragment);
-                }
-                break;
         }
         transaction.commit();
     }
@@ -171,7 +151,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         if (oneFragment != null) this.transaction.hide(oneFragment);
         if (twoFragment != null) this.transaction.hide(twoFragment);
         if (threeFragment != null) this.transaction.hide(threeFragment);
-        if (fourFragment != null) this.transaction.hide(fourFragment);
 
     }
 
