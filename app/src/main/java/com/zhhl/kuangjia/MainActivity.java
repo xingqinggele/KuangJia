@@ -158,22 +158,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     protected void initData() {
-        // 网络请求
-        RequestParams params = new RequestParams();
-        params.put("", "");
-        RequestCenter.request_Url(params, new DisposeDataListener() {
-            //成功
-            @Override
-            public void onSuccess(Object o) {
 
-            }
-
-            //失败
-            @Override
-            public void onFailure(OkHttpException e) {
-
-            }
-        });
     }
 
     @Override

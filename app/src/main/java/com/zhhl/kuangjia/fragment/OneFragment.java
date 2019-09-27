@@ -14,9 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.toollibrary.Utils.ILogUploadImpl;
 import com.zhhl.kuangjia.R;
 import com.zhhl.kuangjia.activitys.CeshiActivity;
 import com.zhhl.kuangjia.activitys.JieTuActivity;
+import com.zhhl.kuangjia.activitys.PaizhaoActivity;
 import com.zhhl.kuangjia.activitys.SQLiteActivity;
 import com.zhhl.kuangjia.activitys.ShuiyinActivity;
 
@@ -43,6 +45,8 @@ public class OneFragment extends Fragment {
     Button btn4;
     @BindView(R.id.btn5)
     Button btn5;
+    @BindView(R.id.btn6)
+    Button btn6;
     Unbinder unbinder;
     private static final String ARG = "arg";
     @Nullable
@@ -64,7 +68,7 @@ public class OneFragment extends Fragment {
         return fragment;
     }
 
-    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5})
+    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5,R.id.btn6})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -105,6 +109,10 @@ public class OneFragment extends Fragment {
             case R.id.btn5:
                 Intent intent3 = new Intent(getActivity(), SQLiteActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.btn6:
+                Intent intent4 = new Intent(getActivity(), PaizhaoActivity.class);
+                startActivity(intent4);
                 break;
         }
     }

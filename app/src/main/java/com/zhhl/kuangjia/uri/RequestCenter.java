@@ -9,6 +9,7 @@ import com.example.toollibrary.okhttp.request.RequestParams;
 
 
 import static com.zhhl.kuangjia.uri.UrlService.QISHI1;
+import static com.zhhl.kuangjia.uri.UrlService.ShenHE;
 
 
 /**
@@ -17,8 +18,14 @@ import static com.zhhl.kuangjia.uri.UrlService.QISHI1;
 
 public class RequestCenter {
 
-    public static void request_Url(RequestParams params, DisposeDataListener listener) {
+    public static void request_Url(RequestParams params, DisposeDataListener listener)
+    {
         CommonOkHttpClient.post((CommonRequest.createPostRequest(QISHI1, params)), new DisposeDataHandle(listener));
+    }
+
+    public static void request_SH(RequestParams params, DisposeDataListener listener)
+    {
+        CommonOkHttpClient.post((CommonRequest.createPostRequest(ShenHE, params)), new DisposeDataHandle(listener));
     }
 
 }
