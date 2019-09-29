@@ -62,6 +62,7 @@ public class Map extends BaseActivity {
     RelativeLayout filsh;
     @BindView(R.id.title)
     TextView title;
+
     @Override
     protected int getLayoutId() {
         return R.layout.map;
@@ -83,7 +84,7 @@ public class Map extends BaseActivity {
         title.setText("MapActivity");
     }
 
-    @OnClick({R.id.img1, R.id.img2, R.id.img3, R.id.img4, R.id.img5, R.id.img6, R.id.img7, R.id.img8, R.id.img9, R.id.img10, R.id.img11, R.id.img12,R.id.filsh})
+    @OnClick({R.id.img1, R.id.img2, R.id.img3, R.id.img4, R.id.img5, R.id.img6, R.id.img7, R.id.img8, R.id.img9, R.id.img10, R.id.img11, R.id.img12, R.id.filsh})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img1:
