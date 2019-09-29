@@ -92,6 +92,8 @@ public class   MainActivity extends BaseActivity implements RadioGroup.OnChecked
         }
         rgFooter.setOnCheckedChangeListener(this);
         rgFooter.check(R.id.rb_message);
+
+        // 新加的git
     }
 
     @Override
