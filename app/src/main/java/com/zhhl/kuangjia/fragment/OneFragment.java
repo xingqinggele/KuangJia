@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import com.example.toollibrary.Utils.ILogUploadImpl;
 import com.zhhl.kuangjia.R;
 import com.zhhl.kuangjia.activitys.CeshiActivity;
+import com.zhhl.kuangjia.activitys.EventBus.EvenActivity1;
 import com.zhhl.kuangjia.activitys.JieTuActivity;
 import com.zhhl.kuangjia.activitys.PaizhaoActivity;
 import com.zhhl.kuangjia.activitys.SQLiteActivity;
@@ -47,6 +50,8 @@ public class OneFragment extends Fragment {
     Button btn5;
     @BindView(R.id.btn6)
     Button btn6;
+    @BindView(R.id.btn7)
+    Button btn7;
     Unbinder unbinder;
     private static final String ARG = "arg";
     @Nullable
@@ -55,6 +60,7 @@ public class OneFragment extends Fragment {
         View view = inflater.inflate(R.layout.onefragment, container, false);
         unbinder = ButterKnife.bind(this, view);
         txt1.setText(getArguments().getString( ARG));
+
 //        new ILogUploadImpl("调起的参数","1","返回的参数").sendLog();
         return view;
     }
@@ -68,7 +74,7 @@ public class OneFragment extends Fragment {
         return fragment;
     }
 
-    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5,R.id.btn6})
+    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5,R.id.btn6,R.id.btn7})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -113,6 +119,10 @@ public class OneFragment extends Fragment {
             case R.id.btn6:
                 Intent intent4 = new Intent(getActivity(), PaizhaoActivity.class);
                 startActivity(intent4);
+                break;
+            case R.id.btn7:
+                Intent intent5 = new Intent(getActivity(), EvenActivity1.class);
+                startActivity(intent5);
                 break;
         }
     }

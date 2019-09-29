@@ -3,6 +3,8 @@ package com.zhhl.kuangjia.base;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -20,7 +22,6 @@ import com.zhhl.kuangjia.R;
 import com.zhhl.kuangjia.update.NotificationInfo;
 import com.zhhl.kuangjia.update.UpdateInfo;
 import com.zhhl.kuangjia.update.UpdateManager;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -164,18 +165,50 @@ public abstract class BaseActivity extends FragmentActivity implements ViewTreeO
         new UpdateManager(mContext, apkURL, apkName, isSlient, updateInfo, notificationInfo).init();
     }
 
+    /**
+     * 获取本地软件版本号
+     */
+    public static int getLocalVersion(Context ctx) {
+        int localVersion = 0;
+        try {
+            PackageInfo packageInfo = ctx.getApplicationContext()
+                    .getPackageManager()
+                    .getPackageInfo(ctx.getPackageName(), 0);
+            localVersion = packageInfo.versionCode;
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return localVersion;
+    }
+
+    /**
+     * 获取本地软件版本号名称
+     */
+    public static String getLocalVersionName(Context ctx) {
+        String localVersion = "";
+        try {
+            PackageInfo packageInfo = ctx.getApplicationContext()
+                    .getPackageManager()
+                    .getPackageInfo(ctx.getPackageName(), 0);
+            localVersion = packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return localVersion;
+    }
+
     //开启dialog
-    public void onDialog(String text)
-    {
+    public void onDialog(String text) {
         if (progressDialog == null)
             progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage(text+"");
+        progressDialog.setMessage(text + "");
         progressDialog.setCancelable(false);
-            progressDialog.show();
+        progressDialog.show();
     }
+
     //关闭dialog
-    public void offDialog()
-    {
+    public void offDialog() {
         progressDialog.dismiss();
     }
 }

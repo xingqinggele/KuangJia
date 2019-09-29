@@ -8,7 +8,7 @@ android {
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -68,6 +68,9 @@ dependencies {
     implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
     //SQLite数据库
     implementation 'com.github.satyan:sugar:1.5'
+//    主要功能是替代Intent,Handler,BroadCast在Fragment，Activity，Service，线程之间传递消息.优点是开销小，代码更优雅。以及将发送者和接收者解耦。
+    implementation 'de.greenrobot:eventbus:2.4.0'
+
 
 
 }

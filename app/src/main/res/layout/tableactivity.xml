@@ -220,6 +220,8 @@
             </RelativeLayout>
 
             <Button
+                android:background="#227AF8"
+                android:textColor="#FFFFFF"
                 android:textSize="17sp"
                 android:id="@+id/tj_btn"
                 android:layout_marginTop="20dp"

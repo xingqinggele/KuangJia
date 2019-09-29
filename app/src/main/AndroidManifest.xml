@@ -44,6 +44,10 @@
         <activity android:name=".activitys.ShuiyinActivity"/>
         <activity android:name=".activitys.SQLiteActivity"/>
         <activity android:name=".activitys.PaizhaoActivity"/>
+        <activity android:name=".activitys.Mepersonal"/>
+        <activity android:name=".activitys.MeEdition"/>
+        <activity android:name=".activitys.EventBus.EvenActivity1"/>
+        <activity android:name=".activitys.EventBus.EvenActivity2"/>
     </application>
 
 </manifest>

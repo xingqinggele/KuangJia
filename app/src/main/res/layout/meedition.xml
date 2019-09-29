@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:id="@+id/zdf_r1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本名"
+            android:textColor="#ff1f1f1f"
+            android:textSize="17sp"
+            />
+
+      <TextView
+          android:id="@+id/edtion_name"
+          android:layout_marginRight="35dp"
+          android:textColor="#ff1f1f1f"
+          android:layout_centerVertical="true"
+          android:textSize="17sp"
+          android:layout_alignParentRight="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:background="#CFCFCF"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RelativeLayout
+        android:id="@+id/zdf_r2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本号"
+            android:textColor="#ff1f1f1f"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/edtion_number"
+            android:layout_marginRight="35dp"
+            android:textColor="#ff1f1f1f"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:background="#CFCFCF"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</LinearLayout>
