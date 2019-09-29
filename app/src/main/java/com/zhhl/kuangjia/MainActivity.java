@@ -93,7 +93,7 @@ public class   MainActivity extends BaseActivity implements RadioGroup.OnChecked
         rgFooter.setOnCheckedChangeListener(this);
         rgFooter.check(R.id.rb_message);
 
-        // 新加的git
+        // 我们首先新建一个本地分支“test02”，然后做出一些修改后commit。如图：
     }
 
     @Override
