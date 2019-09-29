@@ -40,7 +40,7 @@ import com.zhhl.kuangjia.view.DragFloatActionButton;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
+public class   MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
     private static final String[] BASIC_PERMISSIONS = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
