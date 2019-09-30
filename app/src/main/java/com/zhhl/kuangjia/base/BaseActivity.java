@@ -7,10 +7,14 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextSwitcher;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -211,4 +215,5 @@ public abstract class BaseActivity extends FragmentActivity implements ViewTreeO
     public void offDialog() {
         progressDialog.dismiss();
     }
+
 }
