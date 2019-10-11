@@ -24,7 +24,10 @@ import com.zhhl.kuangjia.activitys.EventBus.EvenActivity1;
 import com.zhhl.kuangjia.activitys.JieTuActivity;
 import com.zhhl.kuangjia.activitys.PaizhaoActivity;
 import com.zhhl.kuangjia.activitys.SQLiteActivity;
+import com.zhhl.kuangjia.activitys.ServiceActivity;
+import com.zhhl.kuangjia.activitys.ServiceActivity1;
 import com.zhhl.kuangjia.activitys.ShuiyinActivity;
+import com.zhhl.kuangjia.activitys.XianchengActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -55,6 +58,12 @@ public class OneFragment extends Fragment {
     Button btn7;
     @BindView(R.id.btn8)
     Button btn8;
+    @BindView(R.id.btn9)
+    Button btn9;
+    @BindView(R.id.btn10)
+    Button btn10;
+    @BindView(R.id.btn11)
+    Button btn11;
     Unbinder unbinder;
     private static final String ARG = "arg";
     @Nullable
@@ -77,7 +86,7 @@ public class OneFragment extends Fragment {
         return fragment;
     }
 
-    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5,R.id.btn6,R.id.btn7,R.id.btn8})
+    @OnClick({R.id.btn1, R.id.btn2,R.id.btn4,R.id.btn5,R.id.btn6,R.id.btn7,R.id.btn8,R.id.btn9,R.id.btn10,R.id.btn11})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -130,6 +139,18 @@ public class OneFragment extends Fragment {
             case R.id.btn8:
                 Intent intent6 = new Intent(getActivity(), ConstraintLayout.class);
                 startActivity(intent6);
+                break;
+            case R.id.btn9:
+                Intent intent7 = new Intent(getActivity(), ServiceActivity.class);
+                startActivity(intent7);
+                break;
+            case R.id.btn10:
+                Intent intent8 = new Intent(getActivity(), ServiceActivity1.class);
+                startActivity(intent8);
+                break;
+            case R.id.btn11:
+                Intent intent9 = new Intent(getActivity(), XianchengActivity.class);
+                startActivity(intent9);
                 break;
         }
     }

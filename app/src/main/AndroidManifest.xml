@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhhl.kuangjia">
+
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <!--写入文件-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -9,6 +11,10 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 添加操作闪光灯的权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 添加操作震动器的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:networkSecurityConfig="@xml/network_config"
@@ -29,14 +35,14 @@
         <!--第2步新建的类所在的包名-->
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.zhhl.kuangjia.bean"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activitys.LoginActivity"/>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".welcomes.Welcome"/>
         <activity android:name=".activitys.CeshiActivity"/>
         <activity android:name=".activitys.Map"/>
@@ -51,6 +57,7 @@
         <activity android:name=".activitys.EventBus.EvenActivity2"/>
         <activity android:name=".activitys.ConstraintLayout"/>
         <activity android:name=".activitys.EditingActivity"/>
+        <activity android:name=".RegisterActivity"/>
     </application>
 
 </manifest>

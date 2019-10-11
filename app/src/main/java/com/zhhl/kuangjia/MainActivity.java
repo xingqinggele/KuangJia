@@ -49,7 +49,7 @@ public class   MainActivity extends BaseActivity implements RadioGroup.OnChecked
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION
+            Manifest.permission.ACCESS_FINE_LOCATION,
     };
     private static int REQUEST_PERMISSION_CODE = 1;
 

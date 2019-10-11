@@ -12,20 +12,17 @@ public class User extends SugarRecord {
     @Unique
     String name;
     String password;
-    String sex;
 
 
     public User() {
 
     }
 
-
-
-    public User(String name, String password, String sex) {
+    public User(String name, String password) {
 
         this.name = name;
         this.password = password;
-        this.sex = sex;
+
     }
 
     public String getName() {
@@ -44,13 +41,6 @@ public class User extends SugarRecord {
         this.password = password;
     }
 
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
 
 
 }

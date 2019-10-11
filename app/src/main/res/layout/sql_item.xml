@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp">
@@ -13,6 +13,12 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/one_case_acti_list_item_liner_bg"
         android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@drawable/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
